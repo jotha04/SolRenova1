@@ -1,11 +1,6 @@
 <?php
 include("conexion.php");
 session_start();
-if (password_verify($pass, $user["Contrasena"])) {
-    $_SESSION['is_logged'] = true;
-    $_SESSION['username'] = $user['Usuario'];
-    $_SESSION['id'] = $user['ID']; // Asegúrate de que esta línea esté correcta
-}
 
 if (isset($_POST['enviar'])) {
     // Capturar los datos del formulario
@@ -15,7 +10,9 @@ if (isset($_POST['enviar'])) {
     $proyectosCurso = trim($_POST['proyectoencurso']);
     $infraestructura = trim($_POST['infraestructura']);
     $empresaID = intval($_POST['empresa']);  // Capturar el ID de la empresa seleccionada
-    
+    $userID = $_SESSION['id'];
+    $username = $_SESSION['username'];
+    echo $username;
     // Insertar en la tabla `ubicacion`
     $consultaUbicacion = $conn->prepare("INSERT INTO ubicacion (LATITUD, LONGITUD) VALUES (?, ?)");
     $consultaUbicacion->bind_param("ss", $latitud, $longitud);

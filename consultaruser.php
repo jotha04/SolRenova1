@@ -10,10 +10,11 @@ if(isset($_POST['enviar'])){
     if ($consultarUsuario->num_rows > 0){
         
      $user = $consultarUsuario->fetch_assoc();
+     print_r($user); 
       if(password_verify($pass, $user["Contrasena"])){
          $_SESSION['is_logged']= true;
          $_SESSION['username']=$user['Usuario'];
-         $_SESSION['id'] = $user['id'];
+         $_SESSION['id'] = $user['ID'];
       }else{
  
         ?>  
