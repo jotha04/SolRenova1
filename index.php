@@ -167,8 +167,8 @@
           <ul>
             <li>
               <a
-                href="https://www.instagram.com/angeldavidbohorquezh/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                >Angel Bohorquez</a
+                href="https://www.facebook.com/jeisonarturo.pinedaborre/?locale=es_LA"
+                >Jeison Pineda</a
               >
             </li>
           </ul>
@@ -178,7 +178,7 @@
             <li>
               <a
                 href="https://www.instagram.com/adalcidespinto/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                >Jeison Pineda</a
+                >Adalcides Pinto</a
               >
             </li>
           </ul>
