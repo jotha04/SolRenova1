@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background: url(img/wallper_login.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.registration-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bad {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    margin: auto;
+    margin-top: 20px;   
+    background-color: #a22;
+    color: #fff;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+form {
+    width: 450px;
+    background: #fff;
+    padding: 10px 20px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 28px;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+
+input {
+    text-align: center;
+    width: 100%;
+    padding: 9px;
+    margin: auto;
+    margin-top: 12px;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+input[type='submit'] {
+    background-color: #48e;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    margin-top: 22px;
+    border: none;
+}
+
+input[type='submit']:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.button_class {
+    padding: 20px;
+    background-color: blue;
+}
+
+.button_class a {
+    list-style: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.ok {
+    text-align: center;
+    width: 90%;
+    padding: 12px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #4e8;
+    color: #fff;
+}
+
+#mandar:hover {
+    cursor: pointer;
+}
+.regresarinicio{
+    position: fixed;
+    right: 3%;
+    top: 3%;
+    list-style: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
