@@ -9,7 +9,7 @@
 <body>
     <div class="form-container">
         <h2>Captura de Información de Ubicación</h2>
-        <form action="procesar.php" method="POST">
+        <form method="POST">
             <label for="latitud">Latitud:</label>
             <input type="text" id="latitud" name="latitud" placeholder="Ingrese la latitud" required>
 
@@ -24,7 +24,6 @@
 
             <label for="infraestructura">Infraestructura Existente:</label>
             <input type="text" id="infraestructura" name="infraestructura" placeholder="Describa la infraestructura existente" required>
-
             <label for="empresa">Empresa:</label>
             <select id="empresa" name="empresa" required>
                 <option value="" disabled selected>Seleccione una empresa</option>
@@ -38,13 +37,14 @@
                 <button type="submit" name='enviar'>Enviar</button>
                 <button type="button" onclick="window.history.back();">Devolver</button>
             </div>
+            <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
         </form>
         <?php
-    include("insertarpte.php");
-    ?>
+
+        include("insertarpte.php");
+        ?>
     <br>
     <a class="regresarinicio " href="index.php">Inicio</a>
-        ?>
 
 
     </div>

@@ -13,6 +13,7 @@ if(isset($_POST['enviar'])){
       if(password_verify($pass, $user["Contrasena"])){
          $_SESSION['is_logged']= true;
          $_SESSION['username']=$user['Usuario'];
+         $_SESSION['id'] = $user['id'];
       }else{
  
         ?>  
