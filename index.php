@@ -15,7 +15,7 @@
           <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#descripcion">Descripcion</a></li>
-            <li><a href="#Contacto">Contacto</a></li>
+            <li><a href="#Contacto">Contactos</a></li>
             <li><a href="#informacion">Informacion</a></li>
             <?php
             include("conexion.php");
