@@ -28,17 +28,25 @@
             <label for="empresa">Empresa:</label>
             <select id="empresa" name="empresa" required>
                 <option value="" disabled selected>Seleccione una empresa</option>
-                <option value="Grupo Enel">Grupo Enel</option>
-                <option value="CFE">CFE (Comisión Federal de Electricidad)</option>
-                <option value="ISA">ISA (Interconexión Eléctrica S.A.)</option>
-                <option value="AES Andes">AES Andes</option>
+                <option value="1">Grupo Enel</option>
+                <option value="2">CFE (Comisión Federal de Electricidad)</option>
+                <option value="3">ISA (Interconexión Eléctrica S.A.)</option>
+                <option value="4">AES Andes</option>
             </select>
 
             <div class="button-group">
-                <button type="submit">Enviar</button>
+                <button type="submit" name='enviar'>Enviar</button>
                 <button type="button" onclick="window.history.back();">Devolver</button>
             </div>
         </form>
+        <?php
+    include("insertarpte.php");
+    ?>
+    <br>
+    <a class="regresarinicio " href="index.php">Inicio</a>
+        ?>
+
+
     </div>
 </body>
 </html>
