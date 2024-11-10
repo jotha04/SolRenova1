@@ -1,3 +1,12 @@
+<?php
+session_start();  // Inicia la sesión al principio
+
+// Verifica si el formulario se envió
+if (isset($_POST['enviar'])) {
+    include("insertarencuesta.php");  // Mueve la lógica de inserción aquí
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,8 +18,8 @@
 <body>
     <div class="container">
         <h1>Formulario de Encuesta</h1>
-        <form action="procesar_encuesta.php" method="post">
-           <label for="zona">Localidad o municipio:</label>
+        <form method="post">
+            <label for="zona">Localidad o municipio:</label>
             <select name="zona" id="zona" required>
                 <option value="">Selecciona una zona...</option>
                 <option value="algarrobo">Algarrobo</option>
@@ -66,10 +75,10 @@
 
             <label for="estado">Estado:</label>
             <select id="estado" name="estado" required>
-                <option value="activo">Activo</option>
-                <option value="en proceso">En Proceso</option>
-                <option value="finalizado">Finalizado</option>
-                <option value="espera">A la espera</option>
+                <option value="Activo">Activo</option>
+                <option value="En proceso">En Proceso</option>
+                <option value="Finalizado">Finalizado</option>
+                <option value="Espera">A la espera</option>
             </select>
 
             <div class="button-group">

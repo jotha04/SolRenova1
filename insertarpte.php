@@ -43,6 +43,5 @@ if (isset($_POST['enviar'])) {
     $consultaZona->close();
     $consultaUpdateUbicacion->close();
 }
-
 $conn->close();
 ?>

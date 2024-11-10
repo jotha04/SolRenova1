@@ -72,7 +72,10 @@
                 <option value="Otro">Otro</option>
             </select>
             <button type="submit">Guardar Selección</button>
+            <button onclick="window.location.href='encuesta.php'">Ir a la Encuesta</button>
+            <a class="regresarinicio " href="index.php">Regresar al inicio</a>
         </form>
+        
     </div>
 </body>
 </html>
