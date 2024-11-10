@@ -51,14 +51,7 @@
       <div class="header-content container">
         <h1>SOL-RENOVA</h1>
         <p>
-        Las redes móviles han evolucionado a través de varias generaciones, cada una marcando un avance tecnológico significativo:
-        1G introdujo las llamadas de voz móviles con tecnología analógica.
-        2G digitalizó las comunicaciones, permitiendo mensajes de texto y mejor calidad de llamadas.
-        2.5G (GPRS/EDGE) fue una mejora intermedia que ofreció velocidades de datos más rápidas.
-        3G trajo internet móvil y streaming de video.
-        4G y 4G LTE ofrecieron velocidades de datos mucho más altas y soporte para streaming de video HD y juegos en línea.
-        5G, la generación más reciente, proporciona velocidades ultrarrápidas y baja latencia, revolucionando no solo la telefonía móvil sino también tecnologías como IoT y vehículos autónomos.
-        </p>
+        El propósito principal de SOL-RENOVA es ofrecer una plataforma integrada para la gestión de proyectos de energía renovable, asegurando la eficiencia en la toma de decisiones mediante el acceso a datos clave y el monitoreo constante de los recursos disponibles. La plataforma permite una mejor coordinación entre las empresas involucradas en proyectos de energía renovable, ayudando a mejorar la planificación y ejecución de proyectos sostenibles. </p>
       </div>
     </header>
     <section id="descripcion"class="conexiones">

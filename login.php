@@ -14,7 +14,7 @@
     <?php
     include("consultaruser.php");
     if(!empty($_SESSION['is_logged']) && $_SESSION['is_logged']){   
-        echo('<script>window.location.replace("http://localhost/coneplit/index.php")</script>');
+        echo('<script>window.location.replace("http://localhost/SolRenova1/index.php")</script>');
        }
     ?>
     <br>

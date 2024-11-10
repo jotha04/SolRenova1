@@ -24,6 +24,6 @@ session_destroy();
 
 $conn->close();
 
-header("Location: http://localhost/coneplit/index.php");
+header("Location: http://localhost/SolRenova1/index.php");
 exit;
 ?>
