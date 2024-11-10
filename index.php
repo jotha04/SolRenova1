@@ -50,38 +50,37 @@
       </div>
       <div class="header-content container">
         <h1>SOL-RENOVA</h1>
-        <p>
-        El propósito principal de SOL-RENOVA es ofrecer una plataforma integrada para la gestión de proyectos de energía renovable, asegurando la eficiencia en la toma de decisiones mediante el acceso a datos clave y el monitoreo constante de los recursos disponibles. La plataforma permite una mejor coordinación entre las empresas involucradas en proyectos de energía renovable, ayudando a mejorar la planificación y ejecución de proyectos sostenibles. </p>
-      </div>
+        <p>SOL-RENOVA es una plataforma para conectar a comunidades remotas con proveedores de soluciones energéticas sostenibles. Nuestro objetivo es identificar áreas con acceso limitado a la electricidad y facilitar la implementación de soluciones energéticas renovables para mejorar la calidad de vida y apoyar el desarrollo sostenible.
+        </div>
     </header>
     <section id="descripcion"class="conexiones">
       <div class="conexiones-content container">
-        <h2>Diferentes tipos de conexiones</h2>
+        <h2>Conexiones Sustentables</h2>
         <p class="txt-p">
-        Las redes móviles han experimentado una evolución significativa desde su creación, pasando por varias generaciones, cada una marcando un hito importante en la forma en que nos comunicamos y accedemos a la información. Aquí está un resumen de todas ellas:
+        A través de SOL-RENOVA, las comunidades pueden reportar necesidades energéticas específicas, mientras que las empresas proveedoras obtienen datos clave para planificar y coordinar la ejecución de proyectos. Las soluciones energéticas propuestas serán sostenibles y adaptadas a las condiciones locales, mejorando el acceso a la energía de una forma eficiente y respetuosa con el medio ambiente.
         </p>
 
         <div class="conexiones-group">
           <div class="conexiones-1">
             <img src="img/3g.png" alt="" />
-            <h2>Informacion sobre 3G</h2>
+            <h2>Información sobre Energía Solar</h2>
             <p>
-            3G - La Tercera Generación: La llegada de 3G a principios del 2000 supuso un salto significativo en la capacidad de transmisión de datos. Con 3G, el acceso a Internet móvil se volvió más práctico, permitiendo el streaming de videos y el uso de aplicaciones más complejas en dispositivos móviles.
+            La energía solar es una de las soluciones clave de SOL-RENOVA. Ofrecemos opciones para la instalación de paneles solares en comunidades remotas, permitiendo una fuente de energía limpia y sostenible que se puede adaptar a diferentes climas y ubicaciones.
             </p>
           </div>
           <div class="conexiones-1">
             <img src="img/4g.png" alt="" />
-            <h2>Informacion sobre 4G</h2>
+            <h2>Información sobre Energía Eólica</h2>
             <p>
-            4G y 4G LTE - La Cuarta Generación: Introducido en la última década, 4G y su evolución, 4G LTE (Long Term Evolution), ofrecieron velocidades de datos aún más rápidas, mejor calidad de llamadas y la capacidad de manejar streaming de video HD y juegos en línea. 4G fue un cambio de juego en términos de lo que los usuarios podían hacer con sus dispositivos móviles.
-
+            En zonas donde las condiciones de viento son favorables, SOL-RENOVA promueve la energía eólica, ofreciendo soluciones como pequeños aerogeneradores que permiten a las comunidades acceder a energía renovable y reducir su dependencia de fuentes contaminantes.
+            
             </p>
           </div>
           <div class="conexiones-1">
             <img src="img/5g.png" alt="" />
-            <h2>Informacion sobre 5G</h2>
+            <h2>Información sobre Energía Hidráulica</h2>
             <p>
-            La Quinta Generación: La más reciente en la evolución de las redes móviles, 5G, ofrece velocidades ultra rápidas y latencias muy bajas. Esta tecnología está destinada a revolucionar no solo la telefonía móvil, sino también a impulsar avances significativos en áreas como el Internet de las Cosas (IoT), vehículos autónomos, y ciudades inteligentes. 5G es fundamental para soportar una cantidad masiva de dispositivos conectados y para aplicaciones que requieren una respuesta en tiempo real.
+            Para áreas cercanas a cuerpos de agua, SOL-RENOVA facilita la implementación de sistemas de energía hidráulica a pequeña escala, una alternativa confiable para el acceso a electricidad en lugares remotos.
             </p>
           </div>
         </div>
@@ -91,14 +90,7 @@
       <div class="services-content container">
         <h2>Ayuda y consejos</h2>
         <p>
-        Para mejorar la conexión de red móvil o considerar otras opciones de redes móviles, existen varias estrategias y recomendaciones que pueden ser útiles. Aquí hay algunos consejos para mejorar la conexión de red móvil:
-        Ubicación y señal: La ubicación puede afectar la calidad de la señal. Intenta moverte a un área con mejor cobertura si estás experimentando problemas de conexión.
-        Reinicio del dispositivo: A veces, reiniciar el dispositivo puede ayudar a restablecer la conexión y mejorar la señal.
-        Actualizaciones de software: Asegúrate de que tu dispositivo esté actualizado con las últimas versiones de software, ya que estas actualizaciones pueden incluir mejoras en la conectividad.
-        Configuración de red: Verifica la configuración de red en tu dispositivo para asegurarte de que esté optimizada para la mejor conexión posible.
-        Cambiar de red: Si estás experimentando problemas persistentes con tu proveedor de red actual, considera cambiar a otro proveedor que ofrezca una mejor cobertura en tu área.
-        Amplificadores de señal: Considera la posibilidad de utilizar un amplificador de señal para mejorar la recepción en áreas con mala cobertura.
-        En cuanto a considerar otras opciones de redes móviles, es importante investigar y comparar las ofertas de diferentes proveedores. Algunos factores a considerar incluyen la cobertura en tu área, la calidad del servicio al cliente, los planes y precios disponibles, y cualquier restricción de velocidad o datos. Algunas opciones de redes móviles alternativas incluyen proveedores virtuales (MVNO) que utilizan las redes de los principales operadores a menudo a precios más competitivos.
+        La plataforma de SOL-RENOVA no solo conecta a las comunidades con soluciones energéticas, sino que también ofrece consejos prácticos para mantener y optimizar el uso de estas tecnologías. Mantener los paneles solares limpios, revisar periódicamente los equipos e invertir en almacenamiento de energía son algunas recomendaciones clave para asegurar un suministro constante y efectivo.
         </p>
       </div>
     </main>
@@ -106,7 +98,7 @@
       <div class="nosotros-1">
         <h2>Sobre nosotros</h2>
         <p>     
-        Como jóvenes emprendedores dedicados a mejorar la conectividad en áreas con acceso limitado, estamos emprendiendo una tarea esencial y transformadora. Nuestro objetivo de conectar a las personas con la operadora móvil ideal es un paso crucial hacia la inclusión digital y el empoderamiento. Cada desafío que superamos en este camino no solo mejora la conectividad, sino que también abre puertas a nuevas oportunidades educativas y económicas. Recordemos que nuestro esfuerzo es un puente hacia un mundo más equitativo y conectado. Con determinación y coraje, estamos sentando las bases para un cambio significativo y duradero, inspirando a otros a seguir nuestro ejemplo. Como dijo Nelson Mandela, "Siempre parece imposible hasta que se hace". Nuestro trabajo no solo es técnico, sino un legado de progreso y esperanza.
+        En SOL-RENOVA, creemos en un mundo donde el acceso a la energía es un derecho para todos. Nos esforzamos por conectar a las comunidades más aisladas con tecnologías de energía renovable que respetan el medio ambiente y mejoran las condiciones de vida. Trabajamos con dedicación y convicción, guiados por el ideal de un desarrollo más equitativo y sostenible.
         </p>
       </div>
       <div class="nosotros-2"></div>

@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "elpeor04";
+$password = "";
 $database = "bd_coneplit";
 
 // Crear conexión
