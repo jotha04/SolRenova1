@@ -9,6 +9,8 @@
         <input type="text" name="usuario" placeholder="Ingrese el usuario" required="">
         <input type="password" name="contrasena" placeholder="Ingrese la contraseña" required>
         <input type="submit" name="enviar" id="mandar">
+        <br></br>
+       <center> <p style="color:white">¿No tienes cuenta? <a style="color:#000000; font-weight: bold;"   href="registrar.php">Regístrate</a></p></center>
     </form>
     
     <?php
