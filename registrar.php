@@ -17,6 +17,6 @@
     include("insertar.php");
     ?>
     <br>
-    <a class="regresarinicio " href="index.php">Inicio</a>
+    <a class="regresarinicio " href="index.php">Regresar a inicio</a>
 </body>
 </html>

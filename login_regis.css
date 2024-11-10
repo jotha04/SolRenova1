@@ -7,7 +7,7 @@
 
 body {
     display: flex;
-    background: url(img/wallper_login.jpg);
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -15,52 +15,27 @@ body {
     height: 100vh;
 }
 
-.registration-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.bad {
-    text-align: center;
-    width: 100%;
-    padding: 12px;
-    margin: auto;
-    margin-top: 20px;   
-    background-color: #a22;
-    color: #fff;
-}
-
-h1 {
-    color: #007bff;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.form-control {
-    margin-bottom: 15px;
-    width: 100%;
-}
-
 form {
     width: 450px;
-    background: #fff;
+    background: transparent;
     padding: 10px 20px;
     margin: auto;
     box-sizing: border-box;
     padding-top: 28px;
-    margin-top: 70px;
+    margin-top: 120px;
     border-radius: 10px;
+    border: 2px solid #ffffff80;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0, 0, .5);
+    overflow: hidden;
+    transition: transform .5s ease height .2s ease;
 }
 
 input {
+    background-color: rgba(88, 88, 88, 0.9);
+    border: 2px solid #ffffff80;
+    border-radius: 20px;
     text-align: center;
     width: 100%;
     padding: 9px;
@@ -70,53 +45,32 @@ input {
     box-sizing: border-box;
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ffffff;
+}
+
 input[type='submit'] {
-    background-color: #48e;
+    width: 140px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffffff80;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
     color: #fff;
-    width: 100%;
-    margin: 0;
-    margin-top: 22px;
-    border: none;
+    font-weight: 600;
+    margin-left: 130px;
+    background: #00cc99;
+    color: #ffffff;
+    position: relative;
 }
 
 input[type='submit']:hover {
-    background-color: #0056b3;
+    background-color: #0c9440;
 }
 
-.login-link {
-    margin-top: 10px;
-}
-
-.login-link a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.button_class {
-    padding: 20px;
-    background-color: blue;
-}
-
-.button_class a {
-    list-style: none;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-}
-
-.ok {
-    text-align: center;
-    width: 90%;
-    padding: 12px;
-    margin: auto;
-    margin-top: 20px;
-    background-color: #4e8;
-    color: #fff;
-}
-
-#mandar:hover {
-    cursor: pointer;
-}
 .regresarinicio{
     position: fixed;
     right: 3%;
@@ -125,4 +79,5 @@ input[type='submit']:hover {
     font-size: 20px;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }

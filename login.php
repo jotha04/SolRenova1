@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Login - SOL-RENOVA</title>
-    <link href="estilo.css">
+    <link rel="stylesheet" href="login_regis.css">
 </head>
 <body>
     <form method="post">
@@ -18,6 +18,6 @@
        }
     ?>
     <br>
-    <a class="regresarinicio " href="index.php">Inicio</a>
+    <a class="regresarinicio " href="index.php">Regresar al inicio</a>
 </body>
 </html>
