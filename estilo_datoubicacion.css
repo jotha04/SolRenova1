@@ -186,3 +186,29 @@ select:focus {
     font-size: 1rem;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 }
+
+.button-group1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.button-group1 button {
+    padding: 0.7rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-group1 button[type="reset"] {
+    background-color: #f31212;
+    color: white;
+}
+
+.button-group1 button[type="reset"]:hover {
+    background-color: #9a1717;
+    transform: translateY(-3px);
+}

@@ -66,9 +66,10 @@
             ?>
         </div>
 
-    <select id="locationSelect" onchange="mostrarDetalles()">
+    <select id="locationSelect" onchange="mostrarDetalles()">   
         <?php
             if ($result->num_rows > 0) {
+               echo "<option value='' disabled selected>Seleccione un reporte</option>";
                while ($row = $result->fetch_assoc()) {
                echo "<option value='{$row['IDReportes']}' data-descripcion='{$row['Descripcion']}' data-fecha='{$row['Fecha']}' data-estado='{$row['Estado']}' data-empresaD='{$row['NombreEmpresa']}'>{$row['Municipio']}</option>";
             }
@@ -100,9 +101,13 @@
             <label>Empresa:</label>
             <p><span id="empresaD"></span></p>
         </div>
-       <br>
+        <br>
+        </div>
+        <br><br>
+        <div class="button-group1">
+                <button type="reset">Limpiar</button>
+        </div>
     </div>
-
     <script>
         function mostrarDetalles() {
         const select = document.getElementById("locationSelect");
