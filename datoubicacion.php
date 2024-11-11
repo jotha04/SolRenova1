@@ -38,7 +38,7 @@
 
             <div class="button-group">
                 <button type="submit" name='enviar'>Enviar</button>
-                <button type="button" onclick="window.history.back();">Devolver</button>
+                <button type="button" onclick="window.location.href='index.php';">Devolver</button>
             </div>
             <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
         </form>
@@ -46,10 +46,6 @@
 
         include("insertarpte.php");
         ?>
-    <br>
-    <a class="regresarinicio " href="index.php">Inicio</a>
-
-
     </div>
 </body>
 </html>

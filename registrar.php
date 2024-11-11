@@ -12,13 +12,12 @@
         <input type="password" name="contrasena" placeholder="Ingrese la contraseña" required>
         <input type="submit" name="enviar" id="mandar">
         <br></br>
-        <center> <p style="color:white">¿Ya tienes cuenta? <a style="color:#000000; font-weight: bold;"   href="login.php">Inicia sesión</a></p></center>
-    </form>
-    
-    <?php
+        <center> <p style="color:white">¿Ya tienes cuenta? <a style="color:white;"   href="login.php">Inicia sesión</a></p></center>
+        <br><br>
+        <?php
     include("insertar.php");
     ?>
-    <br>
-    <a class="regresarinicio " href="index.php">Regresar a inicio</a>
+    </form>
+    <a class="regresarinicio " href="index.php">Regresar al inicio</a>
 </body>
 </html>

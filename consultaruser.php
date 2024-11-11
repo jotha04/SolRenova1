@@ -28,10 +28,10 @@ if (isset($_POST['enviar'])) {
             header("Location: index.php");
             exit();
         } else {
-            echo "<h3 class='bad'>Contraseña incorrecta.</h3>";
+            echo "<h4 class='bad'>Contraseña incorrecta.</h4>";
         }
     } else {
-        echo "<h3 class='bad'>Usuario no encontrado.</h3>";
+        echo "<h4 class='bad'>Usuario no encontrado.</h4>";
     }
 
     $stmt->close();
