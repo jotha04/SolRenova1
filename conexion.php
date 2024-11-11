@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "elpeor04";
 $database = "bd_coneplit";
 
 

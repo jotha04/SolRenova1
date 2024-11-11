@@ -39,7 +39,7 @@
               echo('<li><a href="login.php">Iniciar sesion</a></li>');
               echo('<li><a href="registrar.php">Registrar</a></li>');
              }else{
-              echo('<li><a>'.$_SESSION['username'].'</a></li>');
+              echo('<li><a href="perfil.php">'.$_SESSION['username'].'</a></li>');
               echo('<li><a href="cierresesion.php">Cerrar sesion</a></li>');
              }
            
