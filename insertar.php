@@ -32,7 +32,7 @@ if(isset($_POST['enviar'])){
             $respuesta =mysqli_query($conn, $solicitud);
             if ($respuesta){
               ?>
-              <h3 class="ok"> Usuario creado correctamente en la base de datos</h3>;
+              <h3 class="ok"> Usuario creado correctamente en la base de datos</h3>
               <?php
             }
         }
