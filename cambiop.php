@@ -1,12 +1,10 @@
 <?php
-// Verificar si la sesión ya está iniciada
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
 include("conexion.php");
 
-// Verificamos si el usuario está logueado
 if (!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] != true) {
     echo "<h3 class='bad'>No estás logueado.</h3>";
     exit();
@@ -14,13 +12,11 @@ if (!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] != true) {
 
 $id = $_SESSION['id'];
 
-// Si se envió el formulario de actualización
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nombre = trim($_POST['nombre']);
     $email = trim($_POST['email']);
     $contrasena = trim($_POST['contrasena']);
 
-    // Si la contraseña es nueva, la encriptamos
     if (!empty($contrasena)) {
         $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
         $updateQuery = "UPDATE usuarios SET Usuario = ?, Email = ?, Contrasena = ? WHERE ID = ?";
@@ -33,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($stmt->execute()) {
-        // Actualizamos la sesión con los nuevos datos
         $_SESSION['username'] = $nombre;
         $_SESSION['email'] = $email;
 
