@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('fondo2.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url('fondo2.png');
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por el nombre de tu fuente deseada */
+    font-family: 'Arial', sans-serif;
     color: #333;
     text-align: center;
     font-size: 36px;

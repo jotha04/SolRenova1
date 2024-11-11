@@ -43,9 +43,85 @@
             <input type="hidden" name="user_id" value="<?php echo $_SESSION['id']; ?>">
         </form>
         <?php
-
         include("insertarpte.php");
         ?>
+    </div class="form-container">
+
+    <!--segunda tabla-->
+
+    <div class="reporte-container">
+
+        <div class="controls">
+            <label for="locationSelect">Proyecto en curso</label>
+            <br><br>
+            <?php
+            include("conexion.php");
+
+            $sql = "SELECT reportes.IDReportes, reportes.Municipio, reportes.Descripcion, reportes.Fecha, reportes.Estado, 
+               empresa.Nombre AS NombreEmpresa
+            FROM reportes
+            JOIN empresa ON reportes.FK_IDEmpresa = empresa.IDEmpresa";
+
+            $result = $conn->query($sql);
+            ?>
+        </div>
+
+    <select id="locationSelect" onchange="mostrarDetalles()">
+        <?php
+            if ($result->num_rows > 0) {
+               while ($row = $result->fetch_assoc()) {
+               echo "<option value='{$row['IDReportes']}' data-descripcion='{$row['Descripcion']}' data-fecha='{$row['Fecha']}' data-estado='{$row['Estado']}' data-empresaD='{$row['NombreEmpresa']}'>{$row['Municipio']}</option>";
+            }
+        } else {
+            echo "<option>No hay reportes disponibles</option>";
+        }
+        $conn->close();
+        ?>
+    </select>
+
+    <div id="detalles" style="display:none;">
+        <br><br>
+        <div class="campo">
+            <label>Descripción:</label>
+            <p><span id="descripcion"></span></p>
+        </div>
+        <br>
+        <div class="campo">
+            <label>Fecha:</label>
+            <p><span id="fecha"></span></p>
+        </div>
+        <br>
+        <div class="campo">
+           <label>Estado:</label>
+           <p><span id="estado"></span></p>
+        </div>
+        <br>
+        <div class="campo">
+            <label>Empresa:</label>
+            <p><span id="empresaD"></span></p>
+        </div>
+       <br>
     </div>
+
+    <script>
+        function mostrarDetalles() {
+        const select = document.getElementById("locationSelect");
+        const option = select.options[select.selectedIndex];
+    
+        const descripcion = option.getAttribute("data-descripcion");
+        const fecha = option.getAttribute("data-fecha");
+        const estado = option.getAttribute("data-estado");
+        const empresa = option.getAttribute("data-empresaD");
+    
+        document.getElementById("descripcion").textContent = descripcion;
+        document.getElementById("fecha").textContent = fecha;
+        document.getElementById("estado").textContent = estado;
+        document.getElementById("empresaD").textContent = empresa;
+    
+
+       document.getElementById("detalles").style.display = "block";
+       }
+    </script>
+
 </body>
 </html>

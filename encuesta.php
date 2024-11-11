@@ -1,10 +1,5 @@
 <?php
-session_start();  // Inicia la sesión al principio
-
-// Verifica si el formulario se envió
-if (isset($_POST['enviar'])) {
-    include("insertarencuesta.php");  // Mueve la lógica de inserción aquí
-}
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -83,8 +78,14 @@ if (isset($_POST['enviar'])) {
 
             <div class="button-group">
                 <button type="submit" name='enviar'>Enviar</button>
-                <button type="button" onclick="window.history.back();">Devolver</button>
+                <button type="button" onclick="window.location.href='zonas.php';">Devolver</button>
             </div>
+            <br><br>
+            <?php
+            if (isset($_POST['enviar'])) {
+                include("insertarencuesta.php");
+            }
+            ?>
         </form>
     </div>
 </body>
