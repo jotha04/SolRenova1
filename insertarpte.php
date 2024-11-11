@@ -5,6 +5,7 @@ session_start();
 if (isset($_POST['enviar'])) {
     $latitud = trim($_POST['latitud']);
     $longitud = trim($_POST['longitud']);
+    $municipio = trim($_POST['municipio']);
     $poblacion = trim($_POST['poblacion']);
     $proyectosCurso = trim($_POST['proyectoencurso']);
     $infraestructura = trim($_POST['infraestructura']);
@@ -12,8 +13,8 @@ if (isset($_POST['enviar'])) {
     $userID = $_SESSION['id'];
 
 
-    $consultaUbicacion = $conn->prepare("INSERT INTO ubicacion (LATITUD, LONGITUD) VALUES (?, ?)");
-    $consultaUbicacion->bind_param("ss", $latitud, $longitud);
+    $consultaUbicacion = $conn->prepare("INSERT INTO ubicacion (NombreUbicacion, LATITUD, LONGITUD) VALUES (?, ?, ?)");
+    $consultaUbicacion->bind_param("sss",  $municipio, $latitud, $longitud);
     $consultaUbicacion->execute();
 
 

@@ -62,22 +62,19 @@
 
         <div class="conexiones-group">
           <div class="conexiones-1">
-            <img src="img/3g.png" alt="" />
             <h2>Información sobre Energía Solar</h2>
             <p>
             La energía solar es una de las soluciones clave de SOL-RENOVA. Ofrecemos opciones para la instalación de paneles solares en comunidades remotas, permitiendo una fuente de energía limpia y sostenible que se puede adaptar a diferentes climas y ubicaciones.
             </p>
           </div>
           <div class="conexiones-1">
-            <img src="img/4g.png" alt="" />
-            <h2>Información sobre Energía Eólica</h2>
+                   <h2>Información sobre Energía Eólica</h2>
             <p>
             En zonas donde las condiciones de viento son favorables, SOL-RENOVA promueve la energía eólica, ofreciendo soluciones como pequeños aerogeneradores que permiten a las comunidades acceder a energía renovable y reducir su dependencia de fuentes contaminantes.
             
             </p>
           </div>
           <div class="conexiones-1">
-            <img src="img/5g.png" alt="" />
             <h2>Información sobre Energía Hidráulica</h2>
             <p>
             Para áreas cercanas a cuerpos de agua, SOL-RENOVA facilita la implementación de sistemas de energía hidráulica a pequeña escala, una alternativa confiable para el acceso a electricidad en lugares remotos.

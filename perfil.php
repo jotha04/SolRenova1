@@ -1,13 +1,23 @@
 <?php
-// Verificar si se envió el formulario para actualizar
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nombre = $_POST['nombre'];
-    $email = $_POST['email'];
-    $contrasena = $_POST['contrasena'];
+include("conexion.php");
+session_start();
 
-    // Aquí deberías agregar el código para guardar los cambios en la base de datos
-    echo "<script>alert('Perfil actualizado exitosamente');</script>";
+if (!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] != true) {
+    echo "<h3 class='bad'>No estás logueado.</h3>";
+    exit();
 }
+
+$id = $_SESSION['id'];
+
+
+$fetchUserQuery = "SELECT Usuario, Email FROM usuarios WHERE ID = ?";
+$stmt = $conn->prepare($fetchUserQuery);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$userData = $result->fetch_assoc();
+
+$stmt->close();
 ?>
 
 <!DOCTYPE html>
@@ -30,13 +40,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="text" id="email" name="email" required>
 
             <label for="contrasena">Contraseña</label>
-            <input type="text" id="contrasena" name="contrasena" required>
+            <input type="text" id="contrasena" name="contrasena">
 
             <div class="button-group">
                 <button type="submit">Enviar</button>
                 <button type="reset">Limpiar</button>
             </div>
         </form>
+        <?php
+        include("cambiop.php");
+        ?>
+        <br></br>
+        <?php if (isset($mensaje)) { echo $mensaje; } ?>
     </div>
     <a class="regresarinicio " href="index.php">Regresar al inicio</a>
 </body>

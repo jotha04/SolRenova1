@@ -6,7 +6,7 @@ if (isset($_POST['enviar'])) {
     $user = trim($_POST['usuario']);
     $pass = trim($_POST['contrasena']);
     
-    $probarUser = "SELECT ID, Usuario, Contrasena FROM usuarios WHERE Usuario = ?";
+    $probarUser = "SELECT ID, Usuario, Email, Contrasena FROM usuarios WHERE Usuario = ?";
     $stmt = $conn->prepare($probarUser);  
 
     $stmt->bind_param("s", $user);  
@@ -22,6 +22,7 @@ if (isset($_POST['enviar'])) {
         if (password_verify($pass, $userData["Contrasena"])) {
             $_SESSION['is_logged'] = true;
             $_SESSION['username'] = $userData['Usuario'];
+            $_SESSION['email'] = $userData['Email'];
             $_SESSION['id'] = $userData['ID']; 
 
             header("Location: index.php");

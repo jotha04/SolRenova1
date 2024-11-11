@@ -16,6 +16,9 @@
             <label for="longitud">Longitud:</label>
             <input type="text" id="longitud" name="longitud" placeholder="Ingrese la longitud" required>
 
+            <label for="municipio">Municipio:</label>
+            <input type="text" id="municipio" name="municipio" placeholder="Ingrese el municipio" required>
+
             <label for="poblacion">Población:</label>
             <input type="text" id="poblacion" name="poblacion" placeholder="Ingrese la población" required>
 
