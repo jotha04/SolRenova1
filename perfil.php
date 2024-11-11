@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="form-container">
         <h2>Modificar Perfil</h2>
         <form method="POST" action="perfil.php">
-            <label for="nombre">Nombre</label>
+            <label for="nombre">Usuario</label>
             <input type="text" id="nombre" name="nombre" required>
 
             <label for="email">Email</label>
