@@ -2,6 +2,24 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+include("conexion.php");
+if (!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] != true) {
+    echo "<h3 class='bad'>No estás logueado.</h3>";
+    exit();
+   
+}else{
+    $usuario = $_SESSION['username']; 
+    $query = "SELECT Admin FROM usuarios WHERE Usuario = '$usuario'";
+    $result = mysqli_query($conn, $query);
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+if ($row['Admin'] != 1) {
+    echo "<h3 class='bad'>No eres un administrador.</h3>";
+    exit();
+}
+
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">

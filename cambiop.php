@@ -17,24 +17,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
     $contrasena = trim($_POST['contrasena']);
 
-    if (!empty($contrasena)) {
-        $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
-        $updateQuery = "UPDATE usuarios SET Usuario = ?, Email = ?, Contrasena = ? WHERE ID = ?";
-        $stmt = $conn->prepare($updateQuery);
-        $stmt->bind_param("sssi", $nombre, $email, $contrasena, $id);
-    } else {
-        $updateQuery = "UPDATE usuarios SET Usuario = ?, Email = ? WHERE ID = ?";
-        $stmt = $conn->prepare($updateQuery);
-        $stmt->bind_param("ssi", $nombre, $email, $id);
-    }
+    $checkQuery = "SELECT ID FROM usuarios WHERE (Usuario = ? OR Email = ?) AND ID != ?";
+    $stmt = $conn->prepare($checkQuery);
+    $stmt->bind_param("ssi", $nombre, $email, $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if ($stmt->execute()) {
-        $_SESSION['username'] = $nombre;
-        $_SESSION['email'] = $email;
-
-        $mensaje = "<div class='success-message'>Perfil actualizado exitosamente.</div>";
+    if ($result->num_rows > 0) {
+        $mensaje = "<div class='error-message'>El nombre de usuario o el email ya están en uso.</div>";
     } else {
-        $mensaje = "<div class='error-message'>Error al actualizar el perfil.</div>";
+       
+        if (!empty($contrasena)) {
+            $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+            $updateQuery = "UPDATE usuarios SET Usuario = ?, Email = ?, Contrasena = ? WHERE ID = ?";
+            $stmt = $conn->prepare($updateQuery);
+            $stmt->bind_param("sssi", $nombre, $email, $contrasena, $id);
+        } else {
+            $updateQuery = "UPDATE usuarios SET Usuario = ?, Email = ? WHERE ID = ?";
+            $stmt = $conn->prepare($updateQuery);
+            $stmt->bind_param("ssi", $nombre, $email, $id);
+        }
+
+        if ($stmt->execute()) {
+            $_SESSION['username'] = $nombre;
+            $_SESSION['email'] = $email;
+
+            $mensaje = "<div class='success-message'>Perfil actualizado exitosamente.</div>";
+        } else {
+            $mensaje = "<div class='error-message'>Error al actualizar el perfil.</div>";
+        }
     }
 
     $stmt->close();
