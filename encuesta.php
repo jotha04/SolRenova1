@@ -68,17 +68,9 @@ session_start();
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha" required>
 
-            <label for="estado">Estado:</label>
-            <select id="estado" name="estado" required>
-                <option value="Activo">Activo</option>
-                <option value="En proceso">En Proceso</option>
-                <option value="Finalizado">Finalizado</option>
-                <option value="Espera">A la espera</option>
-            </select>
-
             <div class="button-group">
                 <button type="submit" name='enviar'>Enviar</button>
-                <button type="button" onclick="window.location.href='zonas.php';">Devolver</button>
+                <button type="button" onclick="window.location.href='zonas.php';">Regresar</button>
             </div>
             <br><br>
             <?php

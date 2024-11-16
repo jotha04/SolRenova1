@@ -1,12 +1,16 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include("conexion.php");
-session_start();
+
 
 if (isset($_POST['enviar'])) {
     $latitud = trim($_POST['latitud']);
     $longitud = trim($_POST['longitud']);
     $municipio = trim($_POST['municipio']);
     $poblacion = trim($_POST['poblacion']);
+    $estado = trim($_POST['estado']);
     $proyectosCurso = trim($_POST['proyectoencurso']);
     $infraestructura = trim($_POST['infraestructura']);
     $empresaID = intval($_POST['empresa']);
@@ -20,8 +24,8 @@ if (isset($_POST['enviar'])) {
 
     $ubicacionID = $conn->insert_id;
 
-    $consultaZona = $conn->prepare("INSERT INTO zona (FK_IDUbicacion, Poblacion, InfraestructuraExistente, ProyectosEnCurso, FK_IDEmpresa1) VALUES (?, ?, ?, ?, ?)");
-    $consultaZona->bind_param("isssi", $ubicacionID, $poblacion, $infraestructura, $proyectosCurso, $empresaID);
+    $consultaZona = $conn->prepare("INSERT INTO zona (FK_IDUbicacion, Poblacion, InfraestructuraExistente, ProyectosEnCurso, Estado, FK_IDEmpresa1) VALUES (?, ?, ?, ?, ?, ?)");
+    $consultaZona->bind_param("issssi", $ubicacionID, $poblacion, $infraestructura, $proyectosCurso, $estado, $empresaID);
     $consultaZona->execute();
 
     $zonaID = $conn->insert_id;

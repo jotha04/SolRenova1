@@ -5,9 +5,9 @@ include("conexion.php");
 if (isset($_POST['enviar'])) {
     $municipio = trim($_POST['zona']);
     $descripcion = trim($_POST['descripcion']);
+    $proyecto = trim($_POST['proyecto']);
     $fecha = isset($_POST['fecha']) ? $_POST['fecha'] : '';  
     $fechaFormateada = date("Y-m-d", strtotime($fecha)); 
-    $estado = trim($_POST['estado']);
     $empresaID = intval($_POST['empresa']);
     $userID = isset($_SESSION['id']) ? $_SESSION['id'] : null; 
 
@@ -17,8 +17,8 @@ if (isset($_POST['enviar'])) {
 
 
 
-    $consultaReportes = $conn->prepare("INSERT INTO reportes (Municipio, Descripcion, Fecha, Estado, FK_IDEmpresa) VALUES (?, ?, ?, ?, ?)");
-    $consultaReportes->bind_param("ssssi", $municipio, $descripcion, $fechaFormateada, $estado, $empresaID);
+    $consultaReportes = $conn->prepare("INSERT INTO reportes (Municipio, Descripcion, Fecha, ProyectoCurso, FK_IDEmpresa) VALUES (?, ?, ?, ?, ?)");
+    $consultaReportes->bind_param("ssssi", $municipio, $descripcion, $fechaFormateada, $proyecto, $empresaID);
     $consultaReportes->execute();
 
     $reportesID = $conn->insert_id;
