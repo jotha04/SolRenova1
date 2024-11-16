@@ -148,7 +148,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
 
         <br><br>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;" class="button-group1">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;"class="button-group1">
     <button id="deleteButton" type="reset" onclick="eliminarReporte()">Limpiar</button>
     <span id="mensajeRespuesta" style="color: red; font-weight: bold; text-align: center; display: block; margin-top: 10px;"></span>
        </div>

@@ -46,6 +46,12 @@ input {
 input[type="text"] {
     color: rgb(255, 255, 255);
 }
+input[type="email"] {
+    color: rgb(255, 255, 255);
+}
+input[type="contrasena"] {
+    color: rgb(255, 255, 255);
+}
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
@@ -78,7 +84,9 @@ input[type='submit']:hover {
 .bad {
     color: #fff;
 }
-
+.ok{
+    color: #fff !important;
+}
 .regresarinicio{
     position: fixed;
     right: 3%;

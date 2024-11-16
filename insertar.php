@@ -28,11 +28,11 @@ if(isset($_POST['enviar'])){
 
         }else{
             $hashContrasena = password_hash($pass, PASSWORD_BCRYPT);
-            $solicitud = "INSERT INTO usuarios(Usuario, Email, Contrasena, Admin) VALUES ('$user', '$email', '$hashContrasena', 0)";
+            $solicitud = "INSERT INTO usuarios(Usuario, Email, Contrasena, Admin, TipoUsuario) VALUES ('$user', '$email', '$hashContrasena', 0, 'Usuario')";
             $respuesta =mysqli_query($conn, $solicitud);
             if ($respuesta){
               ?>
-              <h3 class="ok"> Usuario creado correctamente en la base de datos</h3>
+              <h3 class="ok" style="color:white"> Usuario creado correctamente</h3>
               <?php
             }
         }

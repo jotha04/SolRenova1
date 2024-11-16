@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+            ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -94,6 +99,30 @@
         }
     </script>
     <a href="index.php" class="regresar-btn">Regresar al inicio</a>
+    <div class="button-container">
+    <?php
+    include("conexion.php");
+    if (isset($_SESSION['username'])) {
+        $usuario = $_SESSION['username']; 
+        $query = "SELECT Admin FROM usuarios WHERE Usuario = '$usuario'";
+        $result = mysqli_query($conn, $query);
+        $query1 = "SELECT TipoUsuario FROM usuarios WHERE Usuario = '$usuario'";
+        $result1 = mysqli_query($conn, $query1);
+
+        if ($result && mysqli_num_rows($result) > 0 && $result1 && mysqli_num_rows($result1) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $row1 = mysqli_fetch_assoc($result1);
+
+            if ($row['Admin'] == 1 || $row1['TipoUsuario'] == "Empresa") {
+                echo '<button type="button" class="empresa-btn" onclick="window.location.href=\'empresa.php\'">Empresa</button>';
+            }
+        }
+    }
+    ?>
     <a href="encuesta.php" class="encuesta-btn">Realizar Encuesta</a>
+</div>
+
+
+</div>
 </body>
 </html>

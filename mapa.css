@@ -105,10 +105,42 @@ button:disabled:hover {
 .regresar-btn:hover {
     background-color: #45a049;
 }
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra ambos botones horizontalmente */
+    align-items: center; /* Alinea verticalmente los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+}
+
+/* Contenedor para alinear botones */
+.button-container {
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 20px auto; /* Margen superior e inferior para separar del contenido */
+}
+
+/* Botón de empresa */
+.empresa-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.empresa-btn:hover {
+    background-color: #45a049;
+}
+
+/* Botón de encuesta */
 .encuesta-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     background-color: #008CBA;
     color: white;
     padding: 10px 20px;
@@ -117,9 +149,58 @@ button:disabled:hover {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
-    z-index: 1000; 
+    border: none;
 }
 
 .encuesta-btn:hover {
     background-color: #007B8F;
+}
+
+/* Contenedor para alinear botones */
+.button-container {
+    display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Alinea los botones verticalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 20px auto; /* Margen superior e inferior para separar del contenido */
+}
+
+/* Botón de empresa */
+.empresa-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.empresa-btn:hover {
+    background-color: #45a049;
+}
+
+/* Botón de encuesta */
+.encuesta-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.encuesta-btn:hover {
+    background-color: #007B8F;
+}
+
+/* Elimina posiciones fijas previas */
+.empresa-btn,
+.encuesta-btn {
+    position: static;
 }
